@@ -80,14 +80,19 @@ def get_notes(request, content_id):
     # print(images)
     # print(type(images[0]))
     pdfname = content_id + ".pdf"
-    with open(pdfname, "wb") as f:
+    with open(pdfname, "wb+") as f:
         f.write(img2pdf.convert(images))
+        f = File(f)
+        notes = models.Notes.objects.create(notes_id=content_id, title="hello", pdf=f)
+        notes.save()
 
-    f = open(pdfname, "rb")
-    f = File(f)
-    filename = str(content_id) + ".pdf"
-    notes = models.Notes.objects.create(notes_id=content_id, title="hello", pdf=f)
-    notes.save()
-    shutil.rmtree(os.getcwd() + "/" + str(content_id))
-    os.remove(filename)
+    try:
+        shutil.rmtree(os.getcwd() + "/" + str(content_id))
+    except:
+        pass
+    try:
+        filename = str(content_id) + ".pdf"
+        os.remove(filename)
+    except:
+        pass
     return render(request, "home.html")
