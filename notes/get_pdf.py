@@ -1,5 +1,4 @@
 import shutil
-import requests
 import json
 import os
 import img2pdf
@@ -77,5 +76,4 @@ def pdf(content_id):
 
     shutil.rmtree(os.getcwd() + "/" + str(content_id))
 
-    file = open(pdfname, "rb")
-    return file
+    return f
