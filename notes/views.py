@@ -7,11 +7,10 @@ import json
 
 def get_notes(request, content_id):
 
-    content_id = str(content_id)
-
     if models.Notes.objects.filter(notes_id=content_id).exists():
         notes = models.Notes.objects.get(notes_id=content_id)
     else:
+        content_id = str(content_id)
         base_url = "https://lecturenotes.in/material/" + content_id
         client = requests.Session()
 
