@@ -77,7 +77,7 @@ def get_notes(request, content_id):
 
             page_no += 30
 
-        image1.save(r'myImages.pdf', save_all=True, append_images=images)
+        image1.save(r'{}.pdf'.format(content_id), save_all=True, append_images=images)
         pdf = open('{}.pdf'.format(content_id), "rb+")
         p1 = File(pdf)
         notes = models.Notes.objects.create(notes_id=content_id, pdf=p1, title="Hello")
