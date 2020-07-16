@@ -14,8 +14,11 @@ import img2pdf
 def get_notes(request, content_id):
 
     content_id = str(content_id)
+    from urllib.request import urlopen
+    import requests
+    import json
+
     # notesid = input("content id")
-    # content_id = "82"
     # content_id = str(notesid)
     base_url = "https://lecturenotes.in/material/" + content_id
     client = requests.Session()
@@ -49,11 +52,7 @@ def get_notes(request, content_id):
             'accept': 'text/html,application/xhtml+xml,application/xml',
             'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
             }
-    try:
-        os.mkdir(os.getcwd() + "/" + str(content_id))
-    except OSError:
-        # print("Creation of the directory  failed", OSError)
-        return None
+
     next_page = True
 
     images = []
@@ -67,32 +66,31 @@ def get_notes(request, content_id):
             next_page = False
 
         img_base_url = "https://lecturenotes.in"
+        flag = 0
         for pg in d['page']:
             # print(pg['path'])
             r = client.get(img_base_url + pg['path'], headers=head)
+            # print(r.url)
+            from PIL import Image
 
-            with open(str(content_id) + "/" + str(pg["pageNum"]) + ".jpg", 'wb') as f:
-                f.write(r.content)
-                images.append(str(content_id) + "/" + str(pg["pageNum"]) + ".jpg")
+            if flag > 0:
+                img = Image.open(urlopen(r.url))
+                im1 = img.convert('RGB')
+                images.append(img)
+                flag += 1
+            else:
+                img1 = Image.open(urlopen(r.url))
+                image1 = img1.convert('RGB')
+
+                flag += 1
 
         page_no += 30
 
     # print(images)
     # print(type(images[0]))
-    pdfname = content_id + ".pdf"
-    with open(pdfname, "wb+") as f:
-        f.write(img2pdf.convert(images))
-        f = File(f)
-        notes = models.Notes.objects.create(notes_id=content_id, title="hello", pdf=f)
-        notes.save()
-
-    try:
-        shutil.rmtree(os.getcwd() + "/" + str(content_id))
-    except:
-        pass
-    try:
-        filename = str(content_id) + ".pdf"
-        os.remove(filename)
-    except:
-        pass
+    image1.save(r'myImages.pdf', save_all=True, append_images=images)
+    print("##########################")
+    pdf = open('myImages.pdf', "rb+")
+    p1 = File(pdf)
+    notes = models.Notes.objects.create(notes_id=content_id, pdf=p1, title="Hello")
     return render(request, "home.html")

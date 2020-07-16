@@ -2,6 +2,8 @@ import shutil
 import json
 import os
 import img2pdf
+import requests
+
 
 def pdf(content_id):
     content_id = str(content_id)
@@ -61,7 +63,7 @@ def pdf(content_id):
         for pg in d['page']:
             # print(pg['path'])
             r = client.get(img_base_url + pg['path'], headers=head)
-
+            print(r.content)
             with open(str(content_id) + "/" + str(pg["pageNum"]) + ".jpg", 'wb') as f:
                 f.write(r.content)
                 images.append(str(content_id) + "/" + str(pg["pageNum"]) + ".jpg")
