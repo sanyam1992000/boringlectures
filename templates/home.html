@@ -7,8 +7,15 @@
 <body>
 <h1>I AM A HTML FILE</h1>
 {% if notes.pdf %}
-<embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url={{ notes.pdf.url }}" width="500" height="375">
+    <h6> Your PDF is generated </h6>
+    <a href="{{ notes.pdf.url }}" target="_blank">Link</a>
+{#<embed src="https://drive.google.com/viewerng/#}
+{#viewer?embedded=true&url={{ notes.pdf.url }}" width="500" height="375">#}
+{% else %}
+    <h6> Your pdf is being scrapped. It can take upto 5-10 minutes depending upon the number of pages of notes.</h6>
+    <h6> As soon as pdf is generate. The link would be shown here</h6>
+
 {% endif %}
+
 </body>
 </html>
