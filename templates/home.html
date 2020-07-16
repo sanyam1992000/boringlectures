@@ -6,6 +6,9 @@
 </head>
 <body>
 <h1>I AM A HTML FILE</h1>
-
+{% if notes.pdf %}
+<embed src="https://drive.google.com/viewerng/
+viewer?embedded=true&url={{ notes.pdf.url }}" width="500" height="375">
+{% endif %}
 </body>
 </html>

@@ -83,11 +83,9 @@ def get_pdf(content_id):
         page_no += 30
 
     image1.save(r'{}.pdf'.format(content_id), save_all=True, append_images=images)
+    notes.delete()
     pdf = open('{}.pdf'.format(content_id), "rb+")
     p1 = File(pdf)
-    notes.pdf = p1
-    notes.title = "PDF is sucessfully scrapped !"
-    notes.save()
-    # notes = models.Notes.objects.create(notes_id=content_id, pdf=p1, title="Hello")
+    notes = models.Notes.objects.create(notes_id=content_id, title="done scrapping", pdf=p1)
     return None
 
