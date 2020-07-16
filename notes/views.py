@@ -1,12 +1,7 @@
 import os
 from django.shortcuts import render
-from . import get_pdf
 from . import models
 from django.core.files import File
-import shutil
-import requests
-import json
-import img2pdf
 # Create your views here.
 
 # h = get_pdf.pdf("")
