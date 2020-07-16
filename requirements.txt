@@ -30,3 +30,6 @@ django-import-export
 django-cors-headers==3.2.1
 django-cors-middleware==1.5.0
 django-robots
+django-background-tasks==1.2.5
+celery==4.4.6
+redis==3.5.3

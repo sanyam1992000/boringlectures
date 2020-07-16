@@ -1,9 +1,13 @@
+from time import timezone
+
+from django.http import HttpResponse
 from django.shortcuts import render
 from . import models
 from django.core.files import File
 from urllib.request import urlopen
 import requests
 import json
+from . import tasks
 
 def get_notes(request, content_id):
 
@@ -84,3 +88,8 @@ def get_notes(request, content_id):
 
     context = {"notes": notes}
     return render(request, "home.html", context)
+
+
+def home(request):
+    tasks.sleepy()
+    return HttpResponse("Done")

@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import django_heroku
 
@@ -43,6 +42,10 @@ INSTALLED_APPS = [
     'notes',
     'rest_framework',
     'corsheaders',
+    'background_task',
+    'redis',
+
+    # 'kombu.transport.django',
 ]
 
 MIDDLEWARE = [
@@ -138,6 +141,15 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'https://localhost:3000',
-    'https://xunbao.elementsculmyca.com',
 ]
+
+CELERY_BROKER_URL = 'redis://h:paa4920eead03ab6681c9c6b298bd9762690960b810d2d946f1a6972e48c67f96@ec2-34-236-54-188.compute-1.amazonaws.com:15559'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+
+
+MAX_ATTEMPTS = 5
+MAX_RUN_TIME = 3600
+BACKGROUND_TASK_RUN_ASYNC = True
+
 django_heroku.settings(locals())

@@ -7,6 +7,7 @@ from notes import views as notes_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', notes_views.home, name='home'),
     path('<int:content_id>/', notes_views.get_notes, name='get-notes'),
 ]
 

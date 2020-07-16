@@ -26,7 +26,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b7ca7049-0e94-4f42-b844-db882c79d6e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/14465.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boringnotes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/boringnotes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boringnotes/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/boringnotes/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boringnotes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/boringnotes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/notes/14465.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myImages.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +59,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -123,6 +132,8 @@
       <workItem from="1594688250614" duration="11000" />
       <workItem from="1594858892667" duration="6060000" />
       <workItem from="1594889205700" duration="599000" />
+      <workItem from="1594904385609" duration="1078000" />
+      <workItem from="1594909410450" duration="7415000" />
     </task>
     <servers />
   </component>
