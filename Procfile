@@ -1,2 +1,3 @@
+release: python manage.py migrate --noinput
 web: gunicorn boringnotes.wsgi
-worker: celery worker --app=tasks.app
+worker: REMAP_SIGTERM=SIGQUIT celery worker --app project.celery.app --loglevel info
