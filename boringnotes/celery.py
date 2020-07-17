@@ -24,3 +24,4 @@ def debug_task(self):
 
 # worker: python manage.py celery worker -B -l info
 # worker: celery worker --app=tasks.app
+# worker: REMAP_SIGTERM=SIGQUIT celery worker --app project.celery.app --loglevel info
