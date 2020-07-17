@@ -22,4 +22,4 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 def debug_task(self):
     print('Request: {0!r}'.format(self.request))
 
-# worker: celery worker --app=tasks.app
+# worker: python manage.py celery worker -B -l info
