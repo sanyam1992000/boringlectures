@@ -10,8 +10,5 @@ class NotesAdmin(ModelAdmin):
     list_editable = ('title',)
     list_max_show_all = 100
 
-    fieldsets = (
-        (None, {'fields': ('user', 'roll_no', 'course', 'branch', 'icard', 'phoneno', 'pic')}),
-    )
 
 admin.site.register(models.Notes, NotesAdmin)

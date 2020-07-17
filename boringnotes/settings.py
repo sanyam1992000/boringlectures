@@ -143,7 +143,7 @@ CORS_ORIGIN_WHITELIST = [
     'https://localhost:3000',
 ]
 
-CELERY_BROKER_URL = 'redis://h:paa4920eead03ab6681c9c6b298bd9762690960b810d2d946f1a6972e48c67f96@ec2-34-236-54-188.compute-1.amazonaws.com:15559'
+BROKER_URL = 'redis://h:paa4920eead03ab6681c9c6b298bd9762690960b810d2d946f1a6972e48c67f96@ec2-34-236-54-188.compute-1.amazonaws.com:15559'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 

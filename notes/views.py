@@ -93,4 +93,5 @@ def get_notes(request, content_id):
 
 
 def home(request):
+    tasks.sleepy.delay()
     return HttpResponse("Hello ! I am Home Page")

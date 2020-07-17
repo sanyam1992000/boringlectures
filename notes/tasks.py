@@ -1,3 +1,5 @@
+from time import sleep
+
 from background_task import background
 from django.core.files import File
 from urllib.request import urlopen
@@ -5,14 +7,16 @@ import requests
 import json
 from . import models
 from .models import Notes
+from celery import shared_task
 
-@background(schedule=1)
+@shared_task()
 def sleepy():
     notes = Notes.objects.create(title="testings fkcrepc", notes_id=12)
+    sleep(10)
     return None
 
 
-@background(schedule=1)
+@shared_task()
 def get_pdf(content_id):
     notes = models.Notes.objects.get(notes_id=content_id)
     content_id = str(content_id)
