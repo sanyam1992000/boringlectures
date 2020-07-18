@@ -15,7 +15,7 @@ def get_notes(request, content_id):
         notes = models.Notes.objects.get(notes_id=content_id)
     else:
         notes = models.Notes.objects.create(notes_id=content_id, title="pending")
-        tasks.get_pdf(content_id = content_id)
+        tasks.get_pdf.delay(content_id = content_id)
         # content_id = str(content_id)
         # base_url = "https://lecturenotes.in/material/" + content_id
         # client = requests.Session()

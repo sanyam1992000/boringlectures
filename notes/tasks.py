@@ -54,7 +54,7 @@ def get_pdf(content_id):
             }
 
     next_page = True
-
+    total_pages = 0
     images = []
     while (next_page):
         url = "https://lecturenotes.in/material/" + str(content_id) + "/page-" + str(page_no) + "?noOfItems=30"
@@ -77,12 +77,16 @@ def get_pdf(content_id):
                 img = Image.open(urlopen(r.url))
                 im1 = img.convert('RGB')
                 images.append(img)
-                flag += 1
+                total_pages += 1
+                notes.total_pages += 1
+                notes.save()
             else:
                 img1 = Image.open(urlopen(r.url))
                 image1 = img1.convert('RGB')
-
+                total_pages += 1
                 flag += 1
+                notes.total_pages += 1
+                notes.save()
 
         page_no += 30
 
@@ -90,6 +94,6 @@ def get_pdf(content_id):
     notes.delete()
     pdf = open('{}.pdf'.format(content_id), "rb+")
     p1 = File(pdf)
-    notes = models.Notes.objects.create(notes_id=content_id, title="done scrapping", pdf=p1)
+    notes = models.Notes.objects.create(notes_id=content_id, title="done scrapping", pdf=p1, total_pages=total_pages)
     return None
 
