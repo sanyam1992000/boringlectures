@@ -1,5 +1,10 @@
 from time import timezone
 
+from django.core.serializers.json import DjangoJSONEncoder
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import authentication, permissions
+from . import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
 from . import models
@@ -95,3 +100,22 @@ def get_notes(request, content_id):
 def home(request):
     tasks.sleepy.delay()
     return HttpResponse("Hello ! I am Home Page")
+
+
+class GetNotes(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        content_id = self.request.query_params.get('notes_id', None)
+        print("################################################################################")
+        print("################################################################################")
+        print(content_id)
+
+        if models.Notes.objects.filter(notes_id=content_id).exists():
+            notes = models.Notes.objects.filter(notes_id=content_id)
+        else:
+            notes = models.Notes.objects.create(notes_id=content_id, title="pending")
+            tasks.get_pdf.delay(content_id=content_id)
+            notes = models.Notes.objects.filter(notes_id=content_id)
+        serializer = serializers.NotesSerializer(notes, many=True)
+        return Response({"Notes": serializer.data})

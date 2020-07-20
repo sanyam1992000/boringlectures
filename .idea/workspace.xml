@@ -26,13 +26,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7ca7049-0e94-4f42-b844-db882c79d6e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/18813.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/81.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/notes/18813.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/notes/81.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +127,8 @@
       <workItem from="1594909410450" duration="8580000" />
       <workItem from="1594927627482" duration="8167000" />
       <workItem from="1595025006405" duration="6716000" />
-      <workItem from="1595091525760" duration="1820000" />
+      <workItem from="1595091525760" duration="3978000" />
+      <workItem from="1595149584148" duration="623000" />
     </task>
     <servers />
   </component>
@@ -154,6 +148,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="715" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1595095558521">
+      <screen x="0" y="27" width="1864" height="1053" />
+    </state>
+    <state x="715" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1864.1053@0.27.1864.1053" timestamp="1595095558521" />
     <state width="1818" height="336" key="GridCell.Tab.0.bottom" timestamp="1594882128634">
       <screen x="0" y="27" width="1864" height="1053" />
     </state>

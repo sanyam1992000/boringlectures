@@ -9,6 +9,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', notes_views.home, name='home'),
     path('<int:content_id>/', notes_views.get_notes, name='get-notes'),
+    path('notes/', notes_views.GetNotes.as_view(), name='notes'),
+
 ]
 
 
