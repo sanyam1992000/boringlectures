@@ -11,7 +11,7 @@ from celery import shared_task
 
 @shared_task()
 def sleepy():
-    notes = Notes.objects.create(title="testings fkcrepc", notes_id=12)
+    notes = Notes.objects.get_or_create(title="testing", notes_id=12)
     sleep(10)
     return None
 
@@ -73,7 +73,7 @@ def get_pdf(content_id):
             # print(r.url)
             from PIL import Image
 
-            if flag > 0:
+            if flag != 0:
                 img = Image.open(urlopen(r.url))
                 im1 = img.convert('RGB')
                 images.append(img)
@@ -87,7 +87,7 @@ def get_pdf(content_id):
                 flag += 1
                 notes.total_pages += 1
                 notes.save()
-
+            sleep(2)
         page_no += 30
 
     image1.save(r'{}.pdf'.format(content_id), save_all=True, append_images=images)
@@ -95,5 +95,4 @@ def get_pdf(content_id):
     pdf = open('{}.pdf'.format(content_id), "rb+")
     p1 = File(pdf)
     notes = models.Notes.objects.create(notes_id=content_id, title="done scrapping", pdf=p1, total_pages=total_pages)
-    return None
-
+    return
