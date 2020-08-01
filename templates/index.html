@@ -39,18 +39,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3e55ad6f84.js" crossorigin="anonymous"></script>
 
-    <style>
+<style>
     *{
-  padding:0;
-  margin:0;
-}
+    padding:0;
+    margin:0;
+    }
 body {
-   font-family: montserrat;
-   height:100%;
-   color: #2C3E50;
-  padding : 0.5em;
-  margin  : 0;
-background:
+    font-family: montserrat;
+    height:100%;
+    color: #2C3E50;
+    padding : 0.5em;
+    margin  : 0;
+    background:
     linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
 }
 form{
@@ -58,25 +58,25 @@ form{
 	margin-top:2rem;
 	width:45%;
     height:45%;
-    padding:3em 2.5rem;
+    padding:2em 2rem;
     box-sizing:border-box;
-  border: 2px solid #ccc;
-  border-radius:3px;
-  box-shadow:5px 10px #888888;
+    border: 2px solid #ccc;
+    border-radius:3px;
+    box-shadow:5px 10px #888888;
 }
 form .search{
-  position:relative;
-  left:0;
-  right:0;
-  width: 80px;
-  height: 80px;
-   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+    position:relative;
+    left:0;
+    right:0;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 25px 0 crimson;
-  background: crimson;
-  border-radius: 50%;
-  z-index:5;
-  transition:left 0.7s;
-  cursor:pointer;
+    background: crimson;
+    border-radius: 50%;
+    z-index:5;
+    transition:left 0.7s;
+    cursor:pointer;
 
 }
 form input {
@@ -177,9 +177,11 @@ form small{
 			<form action="" method="POST">
                 {% csrf_token %}
                     <div class="form-group">
-                        <div class="info">
+                        <div class="info" align="left">
                             <h4> Visit <a href="https://lecturenotes.in/" target="_blank">lecturenotes.in</a> to choose notes you want to download.</h4>
-                            <h6>Notes ID 2 to 7 digit number. For e.g. 2 and 2527469811 are invalid Notes ID</h6>
+                            <hr>
+                            <h6><b>Notes ID can we found in the URL of notes for example </b><br> <a href="https://lecturenotes.in/notes/18052-note-for-database-engineering-de-by-punyatoya-panigrahi">lecturenotes.in/notes/18052-note-for-database-engineering-de-by-punyatoya-panigrahi</a> <br> has 18052 as NOTES ID</h6>
+                            <h6>Notes ID is 2 to 7 digit number.</h6>
                         </div>
 
                         <input type="text" id="id_notesid" name="notesid" required="" placeholder="Notes ID">
@@ -188,7 +190,15 @@ form small{
                             <i class="fas fa-search" style='font-size:35px; margin-top:24px; left:50%; color:white;'></i></div>
                         </div>
                     <button type="submit" value="submit" class="btn btn-info btn-lg hello-btn"><i class="icon fas fa-check-circle fa" >  Submit</i></button>
-		    </form>
+                    <div align="left">
+                        <h4> Please go through these points - </h4>
+                        <h6> 1. Scarpper can take 10-15 minutes to Scrap </h6>
+                        <h6> 2. We are using free server so we appreciate your patience </h6>
+                        <h6> 3. Sometimes it won't scrap for notes 200+ pages contact developer for manual update </h6>
+
+                    </div>
+
+            </form>
 		</center>
 </section>
 </body>    
