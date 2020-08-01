@@ -2,7 +2,31 @@
 <html>
 
 <head>
+    <meta name="og:site_name" content="Boring Notes - Free Lecture Notes"/>
+    <!-- Primary Meta Tags -->
+    <title>Boring Notes | Free Engineering Notes</title>
+    <meta name="title" content="Boring Notes | Free Engineering Notes">
+    <meta name="description" content="Boring Notes | Free Engineering Notes">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.boringnotes.herokuapp.com/">
+    <meta property="og:title" content="Boring Notes | Free Engineering Notes">
+    <meta property="og:description" content="Boring Notes | Free Engineering Notes">
+    <meta property="og:image" content="https://www.wikihow.com/images/thumb/1/18/Take-Better-Notes-Step-1-Version-2.jpg/v4-460px-Take-Better-Notes-Step-1-Version-2.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.boringnotes.herokuapp.com/">
+    <meta property="twitter:title" content="Boring Notes | Free Engineering Notes">
+    <meta property="twitter:description" content="Boring Notes | Free Engineering Notes">
+    <meta property="twitter:image" content="https://www.wikihow.com/images/thumb/1/18/Take-Better-Notes-Step-1-Version-2.jpg/v4-460px-Take-Better-Notes-Step-1-Version-2.jpg">
+
+
+
     <meta charset="utf-8">
+    <meta name="MobileOptimized" content="true">
+    <meta name="HandheldFriendly" content="true">
     <meta name="description" content="Form">
     <meta name="keywords" content="HTML,CSS,JAVASCRIPT">
     <meta name="author" content="vidushi">
@@ -12,9 +36,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styletry.css">
-    <title>Submit</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3e55ad6f84.js" crossorigin="anonymous"></script>
+
     <style>
     *{
   padding:0;
@@ -141,7 +165,7 @@ form small{
 </head>
 
 
-<body>
+<body bgcolor="black">
 	<section id="head">
     	<center>
             <h3>FIND NOTES</h3>
@@ -154,7 +178,8 @@ form small{
                 {% csrf_token %}
                     <div class="form-group">
                         <div class="info">
-                            <h6>Notes ID is 2 to 7 digit number. For e.g. 2 and 2527469811 are invalid Notes ID</h6>
+                            <h4> Visit <a href="lecturenotes.in">lecturenotes.in</a> to choose notes you want to download.</h4>
+                            <h6>Notes ID 2 to 7 digit number. For e.g. 2 and 2527469811 are invalid Notes ID</h6>
                         </div>
 
                         <input type="text" id="id_notesid" name="notesid" required="" placeholder="Notes ID">
