@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework import authentication, permissions
 from . import serializers
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . import models
 from django.core.files import File
 from urllib.request import urlopen
@@ -98,8 +98,11 @@ def get_notes(request, content_id):
 
 
 def home(request):
-    tasks.sleepy.delay()
-    return HttpResponse("Hello ! I am Home Page")
+    if request.method == 'POST':
+        notesid = request.POST['notesid']
+        return redirect('get-notes', notesid)
+
+    return render(request, "index.html")
 
 
 class GetNotes(APIView):
