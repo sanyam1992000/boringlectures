@@ -107,9 +107,6 @@ class GetNotes(APIView):
 
     def get(self, request):
         content_id = self.request.query_params.get('notes_id', None)
-        print("################################################################################")
-        print("################################################################################")
-        print(content_id)
 
         if models.Notes.objects.filter(notes_id=content_id).exists():
             notes = models.Notes.objects.filter(notes_id=content_id)
