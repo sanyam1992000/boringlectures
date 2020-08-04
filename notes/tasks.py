@@ -86,10 +86,10 @@ def get_notes(content_id):
 
     with open("{}.pdf".format(content_id), "wb") as f:
         f.write(img2pdf.convert(images))
-    pdf = open("output.pdf", "rb+")
+    pdf = open("{}.pdf".format(content_id), "rb+")
     p1 = File(pdf)
     notes.delete()
-    notes = models.Notes.objects.create(notes_id=content_id, title="done scrapping", pdf=p1, total_pages=100)
+    notes = models.Notes.objects.create(notes_id=content_id, title="done scrapping", pdf=p1, total_pages=total_pages)
 
     shutil.rmtree(os.getcwd() + "/" + str(content_id))
     return None
