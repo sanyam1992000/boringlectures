@@ -89,7 +89,7 @@ def get_notes(content_id):
     pdf = open("{}.pdf".format(content_id), "rb+")
     p1 = File(pdf)
     notes.pdf = p1
-    notes.title = "done"
+    notes.status = True
     notes.save()
     # notes.delete()
     # notes = models.Notes.objects.create(notes_id=content_id, title="done scrapping", pdf=p1, total_pages=total_pages)

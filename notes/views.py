@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from bs4 import BeautifulSoup
 from django.core.serializers.json import DjangoJSONEncoder
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -14,12 +15,22 @@ import requests
 import json
 from . import tasks
 
+def get_title(content_id):
+    try:
+        URL = "https://lecturenotes.in/notes/" + str(content_id)
+        r = requests.get(URL)
+        soup = BeautifulSoup(r.content, 'lxml')
+        div = soup.find('h1')
+        return div.text
+    except:
+        return "No Heading"
+
 def get_notes(request, content_id):
 
     if models.Notes.objects.filter(notes_id=content_id).exists():
         notes = models.Notes.objects.get(notes_id=content_id)
     else:
-        notes = models.Notes.objects.create(notes_id=content_id, title="pending", date_time=datetime.now())
+        notes = models.Notes.objects.create(notes_id=content_id, title=get_title(content_id), date_time=datetime.now())
         tasks.get_notes.delay(content_id=content_id)
         # content_id = str(content_id)
         # base_url = "https://lecturenotes.in/material/" + content_id
@@ -114,7 +125,7 @@ class GetNotes(APIView):
         if models.Notes.objects.filter(notes_id=content_id).exists():
             notes = models.Notes.objects.filter(notes_id=content_id)
         else:
-            notes = models.Notes.objects.create(notes_id=content_id, title="pending", date_time=datetime.now())
+            notes = models.Notes.objects.create(notes_id=content_id, title=get_title(content_id), date_time=datetime.now())
             tasks.get_notes.delay(content_id=content_id)
             notes = models.Notes.objects.filter(notes_id=content_id)
         serializer = serializers.NotesSerializer(notes, many=True)
