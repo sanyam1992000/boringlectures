@@ -1,4 +1,4 @@
-from time import timezone
+from datetime import datetime
 
 from django.core.serializers.json import DjangoJSONEncoder
 from rest_framework.views import APIView
@@ -19,7 +19,7 @@ def get_notes(request, content_id):
     if models.Notes.objects.filter(notes_id=content_id).exists():
         notes = models.Notes.objects.get(notes_id=content_id)
     else:
-        notes = models.Notes.objects.create(notes_id=content_id, title="pending")
+        notes = models.Notes.objects.create(notes_id=content_id, title="pending", date_time=datetime.now())
         tasks.get_notes.delay(content_id=content_id)
         # content_id = str(content_id)
         # base_url = "https://lecturenotes.in/material/" + content_id
@@ -114,7 +114,7 @@ class GetNotes(APIView):
         if models.Notes.objects.filter(notes_id=content_id).exists():
             notes = models.Notes.objects.filter(notes_id=content_id)
         else:
-            notes = models.Notes.objects.create(notes_id=content_id, title="pending")
+            notes = models.Notes.objects.create(notes_id=content_id, title="pending", date_time=datetime.now())
             tasks.get_notes.delay(content_id=content_id)
             notes = models.Notes.objects.filter(notes_id=content_id)
         serializer = serializers.NotesSerializer(notes, many=True)
