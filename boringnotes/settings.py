@@ -142,10 +142,10 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'https://localhost:3000',
 ]
-
-BROKER_URL = os.environ['REDIS_URL']
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
+#
+# BROKER_URL = os.environ['REDIS_URL']
+# CELERY_ACCEPT_CONTENT = ['json']
+# CELERY_TASK_SERIALIZER = 'json'
 
 
 MAX_ATTEMPTS = 5

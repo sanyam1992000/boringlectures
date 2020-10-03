@@ -52,17 +52,17 @@ p {
 </style>
 
 <body>
-<h1>{{ notes.title }}</h1>
+<h3>{{ notes.title }}</h3>
 {% if notes.pdf %}
     <center><a href="{{ notes.pdf.url }}">
     <div class="row">    <img src="https://icon-library.com/images/download-icon-white-png/download-icon-white-png-2.jpg" height="50" width="50">
-    <h3 style="display:inline;"> &ensp; Your PDF is generated </h3></div></a></center>
+    <h3 style="display:inline;">   Your PDF is generated </h3></div></a></center>
 <br>
     <center>
     <embed src="{{ notes.pdf.url }}" width="80%" height="700">
 </center>
-{#    <embed src="https://drive.google.com/viewerng/#}
-{#viewer?embedded=true&url={{ notes.pdf.url }}" width="80%" height="500">#}
+
+
 {% else %}
     <meta http-equiv="refresh" content="10"/>
     <center>
