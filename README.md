@@ -18,6 +18,8 @@
   * [Usage](#usage)
 * [Frontend](#frontend)
 * [Backend](#backend)
+    * [Django](#django)
+    * [Celery - Redis](#celery---redis)
 * [Screenshots](#screenshots)
 * [Authors](#authors)
 * [Contributing](#contributing)
