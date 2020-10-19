@@ -101,17 +101,20 @@ This was made for Fun Purpose and for College Notes too.
     <td align="center">
         <a href="https://github.com/sanyam1992000/">
             <img src="https://avatars2.githubusercontent.com/u/44235818?s=460&u=ace44cdd2bd36f9d187041adfe6565049275d77d&v=4" width="100px;" alt="" style="border-radius:50%;" /><br />
-            <sub><b>Sanyam Mittal</b></sub></a><br /><a href="https://github.com/sanyam1992000/boringlectures/commits?author=sanyam1992000" title="Code">💻
         </a>
+        <br><a href="https://github.com/sanyam1992000/boringlectures/commits?author=sanyam1992000" title="Code">💻<b>Sanyam Mittal</b></a>
     </td>    
     <td align="center">
         <a href="https://github.com/v03012000/">
             <img src="https://www.linkedin.com/in/v03012000/detail/photo/" width="100px;" alt="" style="border-radius:50%;" /><br />
-            <sub><b>Vidushi Tickoo</b></sub></a><br /><a href="https://github.com/sanyam1992000/boringlectures/commits?author=v03012000" title="Code">💻
         </a>
+            <br><a href="https://github.com/sanyam1992000/boringlectures/commits?author=v03012000" title="Code">💻<b>Vidushi Tickoo</b></a>
     </td>
   </tr>
 </table>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Linkedin Badge](https://img.shields.io/badge/-Sanyam_Mittal-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/sanyam1992000/)](https://www.linkedin.com/in/sanyam1992000/)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Linkedin Badge](https://img.shields.io/badge/-Vidushi_Tickoo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/v03012000/)](https://www.linkedin.com/in/v03012000/)
 
 [Back to Table of Contents](#table-of-contents)
 
