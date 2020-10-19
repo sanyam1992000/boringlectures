@@ -1,5 +1,7 @@
-<img src="https://img.shields.io/github/issues/sanyam1992000/boringlectures"> <img src="https://img.shields.io/github/forks/sanyam1992000/boringlectures"> <img src="https://img.shields.io/github/stars/sanyam1992000/boringlectures"> <img src="https://img.shields.io/github/contributors/sanyam1992000/boringlectures">
-
+![open issues](https://img.shields.io/github/issues/sanyam1992000/boringlectures)
+![open issues](https://img.shields.io/github/forks/sanyam1992000/boringlectures)
+![open issues](https://img.shields.io/github/stars/sanyam1992000/boringlectures)
+![open issues](https://img.shields.io/github/contributors/sanyam1992000/boringlectures)
 [![Visits Badge](https://badges.pufler.dev/visits/sanyam1992000/boringlectures)](https://badges.pufler.dev)
 
 # Boring Lecture - Free Engineering Notes
@@ -40,8 +42,6 @@ This was made for Fun Purpose and for College Notes too.
 
 ### Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all requirements.
-
 * With Docker compose
 
     ```bash
@@ -61,7 +61,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all req
     python3 manage.py createsuperuser
     ```
 
-## Backend <a class="headerlink" href="#backend" title="Permanent link">#</a>
+## Backend
 
 * #### Django 
     Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It's free and open source.
@@ -84,18 +84,23 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all req
 
 ## Screenshots
 
+![alt text](https://github.com/sanyam1992000/boringlectures/blob/master/screenshots/home.png?raw=True)
+
+![alt text](https://github.com/sanyam1992000/boringlectures/blob/master/screenshots/loading.png?raw=True)
+
+![alt text](https://github.com/sanyam1992000/boringlectures/blob/master/screenshots/notes.png?raw=True)
 ## Authors
 <table>
   <tr>
     <td align="center">
         <a href="https://github.com/sanyam1992000/">
-            <img src="https://avatars2.githubusercontent.com/u/44235818?s=460&u=ace44cdd2bd36f9d187041adfe6565049275d77d&v=4" width="100px;" alt="Sanyam Mittal Picture" style="border-radius:50%;" /><br />
+            <img src="https://avatars2.githubusercontent.com/u/44235818?s=460&u=ace44cdd2bd36f9d187041adfe6565049275d77d&v=4" width="100px;" alt="" style="border-radius:50%;" /><br />
             <sub><b>Sanyam Mittal</b></sub></a><br /><a href="https://github.com/sanyam1992000/boringlectures/commits?author=sanyam1992000" title="Code">💻
         </a>
     </td>    
     <td align="center">
         <a href="https://github.com/v03012000/">
-            <img src="https://www.linkedin.com/in/v03012000/detail/photo/" width="100px;" alt="Vidushi Tickoo Picture" style="border-radius:50%;" /><br />
+            <img src="https://www.linkedin.com/in/v03012000/detail/photo/" width="100px;" alt="" style="border-radius:50%;" /><br />
             <sub><b>Vidushi Tickoo</b></sub></a><br /><a href="https://github.com/sanyam1992000/boringlectures/commits?author=v03012000" title="Code">💻
         </a>
     </td>
