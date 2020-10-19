@@ -32,6 +32,8 @@ This was made for Fun Purpose and for College Notes too.
 *   Celery
 *   Redis
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Getting Started
 ### Prerequisites
 
@@ -60,7 +62,7 @@ This was made for Fun Purpose and for College Notes too.
     docker exec -it django bash
     python3 manage.py createsuperuser
     ```
-
+[Back to Table of Contents](#table-of-contents)
 ## Backend
 
 * #### Django 
@@ -81,7 +83,7 @@ This was made for Fun Purpose and for College Notes too.
         
         * You never want end users to have to wait unnecessarily for pages to load or actions to complete. If a long process is part of your application’s workflow, you can use Celery to execute that process in the background, as resources become available, so that your application can continue to respond to client requests. This keeps the task out of the application’s context.
 
-
+[Back to Table of Contents](#table-of-contents)
 ## Screenshots
 
 ![alt text](https://github.com/sanyam1992000/boringlectures/blob/master/screenshots/home.png?raw=True)
@@ -89,6 +91,8 @@ This was made for Fun Purpose and for College Notes too.
 ![alt text](https://github.com/sanyam1992000/boringlectures/blob/master/screenshots/loading.png?raw=True)
 
 ![alt text](https://github.com/sanyam1992000/boringlectures/blob/master/screenshots/notes.png?raw=True)
+
+[Back to Table of Contents](#table-of-contents)
 ## Authors
 <table>
   <tr>
@@ -107,6 +111,7 @@ This was made for Fun Purpose and for College Notes too.
   </tr>
 </table>
 
+[Back to Table of Contents](#table-of-contents)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
