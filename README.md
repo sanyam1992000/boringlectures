@@ -106,7 +106,7 @@ This was made for Fun Purpose and for College Notes too.
     </td>    
     <td align="center">
         <a href="https://github.com/v03012000/">
-            <img src="https://www.linkedin.com/in/v03012000/detail/photo/" width="100px;" alt="" style="border-radius:50%;" /><br />
+            <img src="https://media-exp1.licdn.com/dms/image/C5603AQGyny2mSyxJ_Q/profile-displayphoto-shrink_800_800/0?e=1608768000&v=beta&t=qJwojFTzx8wUm4JKPTUlO4DEyiettFnkVgTYS0ayem8" width="100px;" alt="" style="border-radius:50%;" /><br />
         </a>
             <br><a href="https://github.com/sanyam1992000/boringlectures/commits?author=v03012000" title="Code">💻<b>Vidushi Tickoo</b></a>
     </td>
